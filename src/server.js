@@ -1,9 +1,10 @@
-// const Path = require('path');
 const Hapi = require("hapi");
 const Hoek = require("hoek");
 const routes = require("./routes");
-
-const registerations = [require("vision"), require("inert"), require("lout")];
+const Vision = require("vision");
+const Inert = require("inert");
+const Lout = require("lout");
+const Handlebars = require("handlebars");
 
 const server = new Hapi.Server();
 
@@ -12,11 +13,11 @@ server.connection({
   host: "localhost"
 });
 
-server.register(registerations, err => {
+server.register([Vision, Inert, Lout], err => {
   Hoek.assert(!err, err);
   server.views({
     engines: {
-      html: require("handlebars")
+      html: Handlebars
     },
     relativeTo: __dirname,
     path: "./"
