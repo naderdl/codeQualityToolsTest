@@ -30,6 +30,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
     "flow-bin": "^0.66.0",
+    "gulp": "^3.9.1",
     "prettier": "^1.10.2"
   },
   "config": {
