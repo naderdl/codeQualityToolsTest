@@ -1,5 +1,5 @@
 function hello(request, reply) {
-  reply('Hello to you my friend.');
+  reply("Hello to you my friend.");
 }
 
 function helloToYou(request, reply) {
@@ -7,9 +7,9 @@ function helloToYou(request, reply) {
 }
 
 function helloToYouFromFile(request, reply) {
-  reply.view('index.html', {
-    hello: 'Hello, ',
-    name: `${encodeURIComponent(request.params.name)}.`,
+  reply.view("index.html", {
+    hello: "Hello, ",
+    name: `${encodeURIComponent(request.params.name)}.`
   });
 }
 

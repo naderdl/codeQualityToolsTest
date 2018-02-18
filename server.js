@@ -1,34 +1,30 @@
 // const Path = require('path');
-const Hapi = require('hapi');
-const Hoek = require('hoek');
-const routes = require('./routes');
+const Hapi = require("hapi");
+const Hoek = require("hoek");
+const routes = require("./routes");
 
-const registerations = [
-  require('vision'),
-  require('inert'),
-  require('lout'),
-];
+const registerations = [require("vision"), require("inert"), require("lout")];
 
 const server = new Hapi.Server();
 
 server.connection({
   port: 8080,
-  host: 'localhost',
+  host: "localhost"
 });
 
-server.register(registerations, (err) => {
+server.register(registerations, err => {
   Hoek.assert(!err, err);
   server.views({
     engines: {
-      html: require('handlebars'),
+      html: require("handlebars")
     },
     relativeTo: __dirname,
-    path: './',
+    path: "./"
   });
 });
 server.route(routes);
 
-server.start((err) => {
+server.start(err => {
   if (err) {
     throw err;
   }
