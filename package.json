@@ -2,10 +2,13 @@
   "name": "codeQualityTools",
   "version": "0.0.1",
   "description": "this a test project for learnig code quality tools.",
-  "main": "server.js",
+  "main": "lib/server.js",
   "scripts": {
     "test": "./node_modules/.bin/eslint ./",
-    "fix": "./node_modules/.bin/eslint ./ --fix"
+    "fix": "./node_modules/.bin/eslint ./ --fix",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
   },
   "author": "naderdl",
   "license": "ISC",
@@ -25,6 +28,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "flow-bin": "^0.66.0",
     "prettier": "^1.10.2"
   }
 }

@@ -1,4 +1,3 @@
-// import Main from './handler';
 const Main = require("./handler");
 
 const routes = [
