@@ -9,9 +9,17 @@
   "author": "naderdl",
   "license": "ISC",
   "dependencies": {
+    "handlebars": "^4.0.11",
     "hapi": "^16.1.1",
+    "hoek": "^5.0.3",
     "inert": "^4.2.0",
     "lout": "^10.0.1",
     "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }
