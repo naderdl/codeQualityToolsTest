@@ -1,10 +1,11 @@
 {
-  "name": "lesson1-hapi-server",
-  "version": "1.0.0",
-  "description": "lesson one hapi server.",
-  "main": "lesson1.js",
+  "name": "codeQualityTools",
+  "version": "0.0.1",
+  "description": "this a test project for learnig code quality tools.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/eslint ./",
+    "fix": "./node_modules/.bin/eslint ./ --fix"
   },
   "author": "naderdl",
   "license": "ISC",
@@ -20,6 +21,9 @@
     "babel-cli": "^6.26.0",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.10.2"
   }
 }
