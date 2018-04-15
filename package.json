@@ -4,11 +4,12 @@
   "description": "this a test project for learnig code quality tools.",
   "main": "lib/server.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint ./",
-    "fix": "./node_modules/.bin/eslint ./ --fix",
-    "build": "babel src/ -d lib/",
+    "lint": "./node_modules/.bin/eslint ./",
+    "lintFix": "./node_modules/.bin/eslint ./ --fix",
+    "build": "babel src/ -d build/",
     "prepublish": "npm run build",
-    "flow": "flow"
+    "flow": "flow",
+    "precommit": "echo 'woof'"
   },
   "author": "naderdl",
   "license": "ISC",
@@ -21,17 +22,24 @@
     "vision": "^4.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^6.1.0",
+    "@commitlint/config-conventional": "^6.1.0",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.45.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
     "flow-bin": "^0.66.0",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2",
     "gulp-nodemon": "^2.2.1",
+    "husky": "^0.14.3",
     "nodemon": "^1.15.0",
     "prettier": "^1.10.2"
   },
